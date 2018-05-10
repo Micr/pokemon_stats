@@ -58,12 +58,16 @@ class PokemonList extends Component {
       total,
       compare,
       compareShown,
+      networkError,
     } = this.props.store;
     const compareLauncher = compare.length !== 0 && <CompareLauncher />
     const compareComponent = compareShown && <Compare />
+    const errorMessage =  networkError.length ?
+      <div id="network-error">{networkError}</div> : null;
 
     return (
       <div id="pokemon-list-container">
+        {errorMessage}
         {loading ? this.renderRefreshIndicator() : null}
         {compareComponent}
         <div id="pokemon-list-header">
@@ -95,7 +99,8 @@ PokemonList.propTypes = {
     page: PropTypes.number.isRequired,
     total: PropTypes.number.isRequired,
     compare: PropTypes.object.isRequired,
-    compareShown: PropTypes.bool.isRequired
+    compareShown: PropTypes.bool.isRequired,
+    networkError: PropTypes.string
   })
 };
 

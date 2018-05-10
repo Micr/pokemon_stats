@@ -17,6 +17,10 @@
   position: relative;
 }
 
+#network-error {
+  color: red;
+}
+
 .refresh-container {
   position: fixed;
   top: 0;

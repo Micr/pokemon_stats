@@ -34,6 +34,7 @@ class PokemonStore {
   @observable typesFilter = [];
   @observable compare = [];
   @observable compareShown = false;
+  @observable networkError = '';
 
   @computed get loading() {
     return this.pokemonsLoading;
@@ -72,10 +73,7 @@ class PokemonStore {
     const limit = this.pageLimit;
     return fetch(`${apiUrl}/pokemon/?offset=${offset}&limit=${limit}`).then(
       res => res.json(),
-      error => {
-        this.pokemonsLoading = false
-        console.log(error)
-      }
+      error => this.handleNetworkError()
     )
     .then(response => this.getPokemonData(response))
   }
@@ -92,6 +90,11 @@ class PokemonStore {
     if (results.length) {
       this.pokemons.replace(results);
     }
+  }
+
+  @action.bound handleNetworkError() {
+    this.pokemonsLoading = false
+    this.networkError = 'There was an error while loading data';
   }
 
   @action updateFilter(name, value) {
