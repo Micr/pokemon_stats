@@ -82,7 +82,10 @@ class PokemonStore {
     this.total = response.count;
     const reFetch = response.results
       .map(({ url }) => fetch(url).then(res => res.json()))
-    Promise.all(reFetch).then(results => this.saveResults(results));
+    Promise.all(reFetch).then(
+      results => this.saveResults(results),
+      () => this.handleNetworkError()
+    );
   }
 
   @action.bound saveResults(results) {
