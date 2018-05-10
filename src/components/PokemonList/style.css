@@ -1,0 +1,36 @@
+#pokemon-list-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+#pokemon-list {
+  border-collapse: collapse;
+}
+#pokemon-list td,
+#pokemon-list th {
+  border: 1px solid black;
+}
+
+#pokemon-list-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.refresh-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+}
+
+@media
+only screen and (max-width: 760px) {
+  #pagination-amount-select {
+    position: static;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,13 @@
+#table-middle-bar {
+  position: relative;
+}
+
+#pagination-amount-select {
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+
+#pagination-amount-label {
+  margin-right: 10px;
+}

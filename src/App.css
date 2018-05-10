@@ -1,0 +1,16 @@
+#app-container {
+  padding: 50px;
+}
+#navigation {
+  display: flex;
+  list-style: none;
+}
+#navigation li {
+  padding: 20px;
+}
+.primary-button {
+  font-size: 16px;
+  padding: 10px;
+  background: #2c2f5d;
+  color: #ffffff;
+}

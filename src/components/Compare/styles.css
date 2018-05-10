@@ -1,0 +1,93 @@
+#compare-modal-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+}
+#compare-modal {
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+}
+#compare-area {
+  background: #fff;
+  overflow-y: auto;
+  height: 100%;
+}
+#compare-area td {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+#compare-area ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#compare-close {
+  color: #fff;
+  position: absolute;
+  top: 7px;
+  right: -20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media
+only screen and (max-width: 760px) {
+
+  #compare-area,
+  #compare-area thead,
+  #compare-area tbody,
+  #compare-area th,
+  #compare-area td,
+  #compare-area tr {
+    display: block;
+  }
+
+  #compare-area thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #compare-area tr { border: 1px solid black; }
+
+  #compare-area td {
+    border: none;
+    border-bottom: 1px solid black;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  #compare-area td:last-child {
+    border-bottom: none;
+  }
+
+  #compare-area td:before {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  #compare-area td:before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #compare-area tr:nth-of-type(3) td:nth-of-type(2):before { content: "Types"; }
+  #compare-area tr:nth-of-type(4) td:nth-of-type(2):before { content: "Abilities"; }
+  #compare-area tr:nth-of-type(5) td:nth-of-type(2):before { content: "Height"; }
+  #compare-area tr:nth-of-type(6) td:nth-of-type(2):before { content: "Width"; }
+  #compare-area tr:nth-of-type(7) td:nth-of-type(2):before { content: "Base Experience"; }
+
+}

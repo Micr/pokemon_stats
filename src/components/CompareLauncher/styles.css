@@ -1,0 +1,30 @@
+#compare-launcher {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#compare-launcher-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.compare-launcher-item {
+  position: relative;
+  border: 1px solid gray;
+  margin-right: 1px;
+}
+.compare-launcher-item-remove {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+@media
+only screen and (max-width: 760px) {
+  #compare-launcher {
+    position: static;
+  }
+}

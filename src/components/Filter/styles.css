@@ -1,0 +1,16 @@
+#filter-container {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+#filter-label {
+  margin-bottom: 5px;
+}
+#filter-type-select {
+  margin-bottom: 5px;
+}
+.filter-input-label-text {
+  margin-right: 10px;
+}
+.filter-input-label {
+  margin-right: 10px;
+}

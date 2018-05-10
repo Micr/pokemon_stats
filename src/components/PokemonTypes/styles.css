@@ -1,0 +1,17 @@
+#category-tags-container {
+  margin-bottom: 10px;
+  height: 50px;
+}
+#category-tag-filter-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.category-tag-filter {
+  padding: 10px;
+  position: relative;
+  background: #aaa;
+  border-radius: 5px;
+  display: flex;
+  margin-right: 5px;
+}
